@@ -1,0 +1,65 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.center-text {
+  text-align: center;
+}
+h1 {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+#calculator-form {
+  padding: 0;
+  max-width: 340px;
+  margin: 20px auto 0 auto;
+}
+.form-group {
+  margin-bottom: 8px;
+}
+.form-group label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 2px;
+}
+.form-group select,
+.form-group input[type="checkbox"],
+.form-group input[type="radio"] {
+  margin-right: 3px;
+}
+.form-group select {
+  width: 100%;
+  padding: 2px;
+}
+button {
+  width: 100%;
+  padding: 6px;
+  background: none;
+  color: inherit;
+  border: 1px solid #000;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 8px;
+}
+button:hover {
+  text-decoration: underline;
+}
+#result-container {
+  padding: 0;
+  max-width: 340px;
+  margin: 16px auto 0 auto;
+  text-align: center;
+}
+#final-price {
+  font-size: 1em;
+  font-weight: bold;
+  margin: 4px 0 0 0;
+}
+#calculation-message {
+  margin-top: 4px;
+  font-size: 0.95em;
+}
+  

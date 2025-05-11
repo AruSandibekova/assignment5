@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dowry calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>Groom price calculator</h1>
+    <p class="center-text">The starting bid is $100</p>
+
+    <form id="calculator-form">
+        <div class="form-group">
+            <label for="education">Education:</label>
+            <select id="education" name="education">
+                <option value="1.5">Undergraduate degree</option>
+                <option value="1.2">College degree</option>
+                <option value="1.05" selected>High school degree</option>
+                <option value="0.9">Middle school degree</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="netWorth">Family net worth:</label>
+            <select id="netWorth" name="netWorth">
+                <option value="2">More than $10,000</option>
+                <option value="1.5">Between $5,000 and $10,000</option>
+                <option value="1.2" selected>Less than $5,000</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="caste">Caste:</label>
+            <select id="caste" name="caste">
+                <option value="100">Brahmin</option>
+                <option value="50">Kshatriya</option>
+                <option value="20" selected>Vaishya</option>
+                <option value="10">Shudra</option>
+                <option value="-50">Varna - untouchable</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Skills:</label>
+            <div>
+                <input type="checkbox" id="skill-music" name="skill" value="10">
+                <label for="skill-music">Playing on a musical instrument (+$10)</label>
+            </div>
+            <div>
+                <input type="checkbox" id="skill-cook" name="skill" value="20">
+                <label for="skill-cook">Good cook (+$20)</label>
+            </div>
+            <div>
+                <input type="checkbox" id="skill-easygoing" name="skill" value="15">
+                <label for="skill-easygoing">Easygoing character (+$15)</label>
+            </div>
+            <div>
+                <input type="checkbox" id="skill-sings" name="skill" value="10">
+                <label for="skill-sings">Sings well (+$10)</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Age:</label>
+            <div>
+                <input type="radio" id="age1" name="age" value="1.5" checked>
+                <label for="age1">Between 18-23</label>
+            </div>
+            <div>
+                <input type="radio" id="age2" name="age" value="1.2">
+                <label for="age2">Between 24-27</label>
+            </div>
+            <div>
+                <input type="radio" id="age3" name="age" value="0.95">
+                <label for="age3">28+</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Reputation:</label>
+            <div>
+                <input type="checkbox" id="rep-parents" name="reputation-coeff" value="0.85">
+                <label for="rep-parents">Gossips about parent's attitude (coeff 0.85)</label>
+            </div>
+            <div>
+                <input type="checkbox" id="rep-character" name="reputation-coeff" value="0.9">
+                <label for="rep-character">Gossips about character (coeff 0.9)</label>
+            </div>
+             <div>
+                <input type="checkbox" id="rep-general" name="reputation-subtract" value="-20">
+                <label for="rep-general">General gossips around person (-$20)</label>
+            </div>
+        </div>
+
+        <button type="button" id="calculate-button">Calculate price</button>
+
+    </form>
+    <div id="result-container">
+        <h2>Final price:</h2>
+        <p id="final-price">$0.00</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
